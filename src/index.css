@@ -1,0 +1,414 @@
+@import "tailwindcss";
+
+:root {
+  --theme-primary: #1677FF;
+  --theme-primary-deep: #0d4ebd;
+  --theme-accent: #00D9FF;
+  --theme-bg: #040914;
+  --theme-surface: #071426;
+  --theme-surface-2: #0b1a36;
+  --theme-rgb: 22, 119, 255;
+  --theme-border: rgba(22, 119, 255, 0.25);
+  --theme-glow: 0 0 24px -4px rgba(22, 119, 255, 0.45);
+  --theme-glow-lg: 0 0 45px -5px rgba(22, 119, 255, 0.65);
+}
+
+[data-theme="blue"] {
+  --theme-primary: #1677FF;
+  --theme-primary-deep: #0d4ebd;
+  --theme-accent: #00D9FF;
+  --theme-bg: #040914;
+  --theme-surface: #071426;
+  --theme-surface-2: #0b1a36;
+  --theme-rgb: 22, 119, 255;
+  --theme-border: rgba(22, 119, 255, 0.25);
+  --theme-glow: 0 0 24px -4px rgba(22, 119, 255, 0.45);
+  --theme-glow-lg: 0 0 45px -5px rgba(22, 119, 255, 0.65);
+}
+
+[data-theme="cyan"] {
+  --theme-primary: #00f0ff;
+  --theme-primary-deep: #0284c7;
+  --theme-accent: #38bdf8;
+  --theme-bg: #040816;
+  --theme-surface: #081026;
+  --theme-surface-2: #0f1c3d;
+  --theme-rgb: 0, 240, 255;
+  --theme-border: rgba(0, 240, 255, 0.25);
+  --theme-glow: 0 0 24px -4px rgba(0, 240, 255, 0.5);
+  --theme-glow-lg: 0 0 45px -5px rgba(0, 240, 255, 0.65);
+}
+
+[data-theme="crimson"] {
+  --theme-primary: #ff1a3c;
+  --theme-primary-deep: #8b001a;
+  --theme-accent: #ff4d6a;
+  --theme-bg: #07070b;
+  --theme-surface: #0e0e16;
+  --theme-surface-2: #141420;
+  --theme-rgb: 255, 26, 60;
+  --theme-border: rgba(255, 26, 60, 0.25);
+  --theme-glow: 0 0 24px -4px rgba(255, 26, 60, 0.5);
+  --theme-glow-lg: 0 0 45px -5px rgba(255, 26, 60, 0.65);
+}
+
+[data-theme="gold"] {
+  --theme-primary: #fbbf24;
+  --theme-primary-deep: #b45309;
+  --theme-accent: #fde68a;
+  --theme-bg: #0b0804;
+  --theme-surface: #141007;
+  --theme-surface-2: #201b10;
+  --theme-rgb: 251, 191, 36;
+  --theme-border: rgba(251, 191, 36, 0.25);
+  --theme-glow: 0 0 24px -4px rgba(251, 191, 36, 0.5);
+  --theme-glow-lg: 0 0 45px -5px rgba(251, 191, 36, 0.65);
+}
+
+[data-theme="emerald"] {
+  --theme-primary: #10b981;
+  --theme-primary-deep: #047857;
+  --theme-accent: #34d399;
+  --theme-bg: #030c08;
+  --theme-surface: #06170f;
+  --theme-surface-2: #0e261b;
+  --theme-rgb: 16, 185, 129;
+  --theme-border: rgba(16, 185, 129, 0.25);
+  --theme-glow: 0 0 24px -4px rgba(16, 185, 129, 0.5);
+  --theme-glow-lg: 0 0 45px -5px rgba(16, 185, 129, 0.65);
+}
+
+[data-theme="purple"] {
+  --theme-primary: #a855f7;
+  --theme-primary-deep: #6b21a8;
+  --theme-accent: #c084fc;
+  --theme-bg: #080514;
+  --theme-surface: #100b26;
+  --theme-surface-2: #191138;
+  --theme-rgb: 168, 85, 247;
+  --theme-border: rgba(168, 85, 247, 0.25);
+  --theme-glow: 0 0 24px -4px rgba(168, 85, 247, 0.5);
+  --theme-glow-lg: 0 0 45px -5px rgba(168, 85, 247, 0.65);
+}
+
+@theme {
+  --font-orbitron: 'Orbitron', monospace, sans-serif;
+  --font-rajdhani: 'Rajdhani', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --color-empire-blue: var(--theme-primary);
+  --color-empire-accent: var(--theme-accent);
+  --color-empire-red: var(--theme-primary);
+  --color-empire-deep: var(--theme-primary-deep);
+  --color-empire-dark: var(--theme-bg);
+  --color-empire-surface: var(--theme-surface);
+  --color-empire-surface-2: var(--theme-surface-2);
+}
+
+/* Custom Esports Utilities and Effects */
+@layer utilities {
+  /* Custom Esports Clip Paths */
+  .clip-chamfer {
+    clip-path: polygon(10px 0%, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0% calc(100% - 10px), 0% 10px);
+  }
+  .clip-chamfer-btn {
+    clip-path: polygon(12px 0%, 100% 0%, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0% 100%, 0% 12px);
+  }
+  .clip-chamfer-sm {
+    clip-path: polygon(8px 0%, 100% 0%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0% 100%, 0% 8px);
+  }
+  .clip-corner-tl {
+    clip-path: polygon(14px 0, 100% 0, 100% 100%, 0 100%, 0 14px);
+  }
+  .clip-corner-tr {
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  }
+  .clip-corner-br {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+  }
+  .clip-esports-card {
+    clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+  }
+  .clip-button-skew {
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+  }
+  .clip-tag {
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  }
+
+  /* Dynamic Theme Glows */
+  .text-glow-theme,
+  .text-glow-red {
+    text-shadow: 0 0 12px rgba(var(--theme-rgb), 0.7), 0 0 28px rgba(var(--theme-rgb), 0.4);
+  }
+  .box-glow-theme,
+  .box-glow-red {
+    box-shadow: 0 0 24px -4px rgba(var(--theme-rgb), 0.45);
+  }
+  .box-glow-theme-lg,
+  .box-glow-red-lg {
+    box-shadow: 0 0 45px -5px rgba(var(--theme-rgb), 0.65);
+  }
+  .border-glow-theme,
+  .border-glow-red {
+    box-shadow: inset 0 0 15px rgba(var(--theme-rgb), 0.2), 0 0 15px rgba(var(--theme-rgb), 0.3);
+  }
+
+  .theme-btn-gradient {
+    background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-deep) 100%);
+  }
+
+  /* Premium Esports Button Styles */
+  .btn-premium-primary {
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(12px 0%, 100% 0%, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0% 100%, 0% 12px);
+    background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-deep) 100%);
+    box-shadow: 0 0 25px rgba(var(--theme-rgb), 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .btn-premium-primary:hover {
+    transform: translateY(-1.5px) scale(1.02);
+    box-shadow: 0 0 35px rgba(var(--theme-rgb), 0.75), 0 0 10px rgba(var(--theme-rgb), 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+  .btn-premium-primary:active {
+    transform: translateY(0.5px) scale(0.98);
+  }
+
+  .btn-premium-secondary {
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(12px 0%, 100% 0%, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0% 100%, 0% 12px);
+    background: rgba(12, 16, 32, 0.85);
+    border: 1px solid rgba(var(--theme-rgb), 0.45);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), inset 0 0 12px rgba(var(--theme-rgb), 0.1);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .btn-premium-secondary:hover {
+    transform: translateY(-1.5px) scale(1.02);
+    border-color: rgba(var(--theme-rgb), 0.85);
+    box-shadow: 0 0 25px rgba(var(--theme-rgb), 0.4), 0 8px 25px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(var(--theme-rgb), 0.2);
+    background: rgba(18, 24, 48, 0.92);
+  }
+  .btn-premium-secondary:active {
+    transform: translateY(0.5px) scale(0.98);
+  }
+
+  .btn-premium-ghost {
+    position: relative;
+    clip-path: polygon(8px 0%, 100% 0%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0% 100%, 0% 8px);
+    background: rgba(var(--theme-rgb), 0.08);
+    border: 1px solid rgba(var(--theme-rgb), 0.35);
+    transition: all 0.2s ease;
+  }
+  .btn-premium-ghost:hover {
+    background: rgba(var(--theme-rgb), 0.2);
+    border-color: var(--theme-primary);
+    box-shadow: 0 0 18px rgba(var(--theme-rgb), 0.4);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--theme-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--theme-surface-2);
+  border-radius: 4px;
+  border: 1px solid rgba(var(--theme-rgb), 0.25);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-primary);
+}
+
+/* Subtle Cyber Grid Background */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(var(--theme-rgb), 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(var(--theme-rgb), 0.05) 1px, transparent 1px);
+}
+
+.cyber-dots {
+  background-image: radial-gradient(rgba(var(--theme-rgb), 0.18) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.7;
+    filter: drop-shadow(0 0 12px rgba(var(--theme-rgb), 0.6));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 26px rgba(var(--theme-rgb), 0.95));
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}
+
+@keyframes sheenSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-sheen {
+  animation: sheenSweep 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes tickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker-scroll {
+  display: inline-flex;
+  animation: tickerScroll 30s linear infinite;
+}
+.animate-ticker-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes radarSweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar-sweep {
+  animation: radarSweep 6s linear infinite;
+}
+
+@keyframes cyberGlitch {
+  0%, 100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translate(-2px, 2px);
+    opacity: 0.95;
+  }
+  40% {
+    transform: translate(-1px, -1px);
+    opacity: 1;
+  }
+  60% {
+    transform: translate(2px, 1px);
+    opacity: 0.92;
+  }
+  80% {
+    transform: translate(1px, -2px);
+    opacity: 1;
+  }
+}
+
+.hover-glitch:hover {
+  animation: cyberGlitch 0.35s ease infinite;
+}
+
+/* Glowing Cyber Border Trace */
+@keyframes laserTrace {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.laser-border-animated {
+  background-size: 200% 200%;
+  animation: laserTrace 4s ease infinite;
+}
+
+/* Card HUD Frame with glowing corner accents */
+.card-hud-premium {
+  position: relative;
+  background: rgba(11, 14, 26, 0.85);
+  border: 1px solid rgba(var(--theme-rgb), 0.25);
+  backdrop-filter: blur(16px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hud-premium:hover {
+  border-color: rgba(var(--theme-rgb), 0.65);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.9), 0 0 30px -5px rgba(var(--theme-rgb), 0.3);
+}
+
+/* Golden Champion Badge Glow */
+.gold-glow {
+  box-shadow: 0 0 25px rgba(251, 191, 36, 0.45);
+}
+
+/* ========================================================
+   iPhone Glass Effect Styles (Apple iOS Frosted Glassmorphism)
+   ======================================================== */
+.iphone-glass {
+  background: rgba(8, 16, 36, 0.65);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.iphone-glass-card {
+  background: linear-gradient(135deg, rgba(13, 24, 52, 0.72) 0%, rgba(6, 12, 28, 0.78) 100%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.iphone-glass-card:hover {
+  border-color: rgba(22, 119, 255, 0.45);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 30px rgba(22, 119, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.iphone-glass-nav {
+  background: rgba(5, 11, 25, 0.82);
+  backdrop-filter: blur(30px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.iphone-glass-input {
+  background: rgba(10, 20, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+}
+
+.iphone-glass-input:focus {
+  border-color: rgba(22, 119, 255, 0.75);
+  box-shadow: 0 0 15px rgba(22, 119, 255, 0.35), inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.iphone-glass-pill {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+
+
+

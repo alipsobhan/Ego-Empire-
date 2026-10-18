@@ -1,0 +1,6 @@
+{
+  "name": "EGO EMPIRE - Free Fire Esports Guild",
+  "description": "Official gaming and esports organization website for EGO EMPIRE Free Fire guild.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,119 @@
+{
+  "guildName": "EGO EMPIRE",
+  "stylizedName": "ᎬᏀᎧ Ꭼᴍᴘɪꤪꤨʀᴇ",
+  "tag": "EGO",
+  "uid": "3072098620",
+  "level": 7,
+  "glory": 971515,
+  "region": "Bangladesh (South Asia)",
+  "game": "Free Fire",
+  "squads": [
+    {
+      "id": "sq-1",
+      "name": "ᎬᏀᎧ Ꮖɴꜰɪɴɪᴛʏ",
+      "order": 1,
+      "maxSlots": 5,
+      "badge": "INF"
+    },
+    {
+      "id": "sq-2",
+      "name": "ᎬᏀᎧ Ꮤᴀʀʀɪᴏʀꜱ",
+      "order": 2,
+      "maxSlots": 5,
+      "badge": "WAR"
+    },
+    {
+      "id": "sq-3",
+      "name": "ᎬᏀᎧ Ꮲʀᴇᴅᴀᴛᴏʀꜱ",
+      "order": 3,
+      "maxSlots": 5,
+      "badge": "PRD"
+    },
+    {
+      "id": "sq-4",
+      "name": "ᎬᏀᎧ Ꮪʜᴀᴅᴏᴡꜱ",
+      "order": 4,
+      "maxSlots": 5,
+      "badge": "SHD"
+    },
+    {
+      "id": "sq-5",
+      "name": "ᎬᏀᎧ Ᏼʟᴀᴅᴇꜱ",
+      "order": 5,
+      "maxSlots": 5,
+      "badge": "BLD"
+    },
+    {
+      "id": "sq-6",
+      "name": "ᎬᏀᎧ Ꮋᴜɴᴛᴇʀꜱ",
+      "order": 6,
+      "maxSlots": 5,
+      "badge": "HNT"
+    },
+    {
+      "id": "sq-7",
+      "name": "EGO BLAST",
+      "order": 7,
+      "maxSlots": 5,
+      "badge": "BLS"
+    },
+    {
+      "id": "sq-8",
+      "name": "EGO PRIME",
+      "order": 8,
+      "maxSlots": 5,
+      "badge": "PRM"
+    }
+  ],
+  "players": [],
+  "notices": [
+    {
+      "id": "notice-1",
+      "title": "Welcome to the New EGO EMPIRE Guild Portal",
+      "content": "Official announcement from EGO EMPIRE High Command:\n\nOur guild roster structure has been completely reorganized into 8 elite tactical divisions. Each squad has exactly 5 operative slots. Registered players will compete for war points in daily scrimmages and regional tournaments.\n\nAll members are requested to report to their squad commanders for verification.",
+      "published": true,
+      "priority": "Pinned",
+      "author": "High Command",
+      "createdAt": "2026-10-17T12:00:00.000Z",
+      "updatedAt": "2026-10-17T12:00:00.000Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log-1792310826237-432",
+      "action": "DELETE_PLAYER",
+      "details": "Permanently removed operative EGO・VALKYRIE (Tanvir Hossain) from roster.",
+      "timestamp": "2026-10-18T08:07:06.237Z",
+      "performedBy": "Commander Saim"
+    },
+    {
+      "id": "log-1792310826235-551",
+      "action": "UPDATE_WAR_POINTS",
+      "details": "Modified war points for EGO・VALKYRIE (add: 80 pts, now 200 pts).",
+      "timestamp": "2026-10-18T08:07:06.235Z",
+      "performedBy": "Commander Saim"
+    },
+    {
+      "id": "log-1792310826232-753",
+      "action": "ADD_PLAYER",
+      "details": "Added operative EGO・VALKYRIE (Tanvir Hossain) to squad ᎬᏀᎧ Ꮖɴꜰɪɴɪᴛʏ.",
+      "timestamp": "2026-10-18T08:07:06.232Z",
+      "performedBy": "Commander Saim"
+    },
+    {
+      "id": "log-1792310826228-3",
+      "action": "ADMIN_LOGIN",
+      "details": "Administrator Commander Saim successfully authenticated.",
+      "timestamp": "2026-10-18T08:07:06.228Z",
+      "performedBy": "Commander Saim"
+    },
+    {
+      "id": "log-init",
+      "action": "SYSTEM_INITIALIZE",
+      "details": "EGO EMPIRE guild system initialized with 8 tactical squads and empty player database.",
+      "timestamp": "2026-10-17T12:00:00.000Z",
+      "performedBy": "System"
+    }
+  ],
+  "lastUpdated": "2026-10-18T08:07:06.237Z"
+}
